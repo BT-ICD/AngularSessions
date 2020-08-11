@@ -1,0 +1,27 @@
+<div class="card">
+    <div class="card-header">
+        ViewChild with NgModel
+    </div>
+    <div class="card-title">
+        <ul>
+            <li>Provides reference to the directive's data structure</li>
+            <li>Access any properties</li>
+            <li>ViewChild reference not reliably available until AfterViewInit</li>
+            <li>ViewChild reference not available if the element is not in the DOM</li>
+            <li>NgForm and NgModel data Structures are read-only</li>
+        </ul>
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-2">
+                <label>First Name</label>
+            </div>
+            <div class="col-md-4">
+                <input type="text" class="form-control" name='firstName' [(ngModel)]='firstName' > 
+            </div>
+        </div>
+        <div class="row">
+            <button type="button" class="btn btn-primary" name="okButton"  (click)="okButtonClick()" >Ok</button>
+        </div>
+    </div>
+</div>

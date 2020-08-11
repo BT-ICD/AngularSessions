@@ -1,0 +1,122 @@
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            Reactive Form Lab1 
+        </div>
+        <div class="card-body">
+            <div class="card-title">
+                Customer Form
+            </div>
+            <form (ngSubmit)="save()" [formGroup]="customerForm">
+                <div class="row">
+                    <div class="col-md-2">
+                        <label >First name</label>
+                    </div>
+                    <input 
+                        class="form-control"
+                        name="firstName" 
+                        type="text" 
+                        formControlName="firstName"
+                        required
+                    />
+                </div>
+                <div class="row">
+                    <div class="col-md-2">
+                        <label >Last name</label>
+                    </div>
+                    <input 
+                        class="form-control"
+                        name="lastName" 
+                        type="text"  
+                        formControlName="lastName"
+                        required
+                    />
+                </div >
+                 <!-- isAvailable -->
+                 <div class="row mt-2">
+                    <div class="col-md-2">
+                        <label for="isAvailable">Assignment</label>
+                    </div>
+                    <input
+                        name="isAvailable"
+                        id="isAvailable"
+                        type="checkbox"
+                        formControlName="isAvailable"
+                    />
+                    <label class="ml-2">Is available for new project</label>
+                </div>
+                <!-- Address Type -->
+                <div class="form-group row mb-2">
+                    <label class="col-md-2 col-form-label">Address Type</label>
+                    <div class="col-md-8">
+                        <div class="form-check form-check-inline">
+                            <label class="form-check-label">
+                                <input
+                                    class="form-check-input"
+                                    type="radio"
+                                    value="1"
+                                    name="addressType"
+                                    formControlName="addressType"
+                                    required
+                                />
+                                Home</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <label class="form-check-label">
+                                <input
+                                    class="form-check-input"
+                                    type="radio"
+                                    value="2"
+                                    name="addressType"
+                                    formControlName="addressType"
+                                    required
+                                />
+                                Business
+                            </label>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- Action Button -->
+                <div  class="form-group row mt-2">
+                       <div class="offset-md-2">
+                            <button class="btn btn-primary mr-3"
+                                type="submit"
+                            >
+                                Save         
+                            </button>
+                            <button 
+                                class="btn btn-outline-primary ml-2"
+                                type="button"
+                                name="setValueButton"
+                                (click)="setValueButtonClick()"
+                            >
+                                Set value
+                            </button>
+                            <button
+                                class="btn btn-outline-primary ml-2"
+                                type="button"
+                                name="patchValueButton"
+                                (click)="patchValueButtonClick()"
+                            >
+                                Patch value
+                            </button>
+                            <button
+                                class="btn btn-outline-primary ml-2"
+                                type="reset"
+                                name="resetButton"
+                            >
+                                Reset - Form Reset
+                            </button>
+                       </div> 
+                       .
+                </div>
+               
+            </form>
+        </div>
+    </div>
+</div>
+<br>Dirty:{{customerForm.dirty}}
+<br>Touched:{{customerForm.touched}}
+<br>Valid:{{customerForm.valid}}
+<br>Value:{{customerForm.value|json}}
