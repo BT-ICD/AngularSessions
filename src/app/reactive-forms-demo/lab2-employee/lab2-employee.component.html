@@ -1,0 +1,162 @@
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            Reactive Form Lab2
+        </div>
+        <div class="card-body">
+            <div class="card-title">
+                Employee Form
+            </div>
+            <form (ngSubmit)="save()" [formGroup]="employeeForm" >
+                <!-- Id -->
+                <div class="row">
+                    <div class="col-md-2">
+                        <label for="empno">Id</label>
+                    </div>
+                    <div class="col-md-4">
+                        <input
+                        class="form-control"
+                        type="text"
+                        name="empno"
+                        formControlName="empno"
+                        required
+                    />
+                    </div>
+                     <!-- Employee Name -->
+                    <div class="col-md-1">
+                        <label for="ename">Name</label>
+                    </div>
+                    <div class="col-md-4">
+                        <input
+                            class="form-control"
+                            type="text"
+                            name="ename"
+                            formControlName="ename"
+                            required
+                        />
+                    </div>
+                </div>
+                <!-- job/designation -->
+                <div class="row mt-1">
+                    <div class="col-md-2">
+                        <label for="">Job</label>
+                    </div>
+                    <div class="col-md-4">
+                        <input
+                            class="form-control"
+                            type="text"
+                            name="job"
+                            formControlName="job"
+                            required
+                        />
+                    </div>
+                    <!-- MGR -->
+                    <div class="col-md-1">
+                        <label for="mgr">MGR</label>
+                    </div>
+                    <div class="col-md-4">
+                        <input
+                            class="form-control"
+                            type="text"
+                            name="mgr"
+                            formControlName="mgr"
+                            required
+                        />
+                    </div>
+                </div>
+                <!-- Hiredate -->
+                <div class="row mt-1">
+                    <div class="col-md-2">
+                        <label for="hiredate">Hiredate</label>
+                    </div>
+                    <div class="col-md-4">
+                        <input
+                            class="form-control"
+                            type="date"
+                            name="hiredate"
+                            formControlName="hiredate"
+                            required
+                        />
+                    </div>
+                    <!-- Email -->
+                    <div class="col-md-1">
+                        <label for="email">Email</label>
+                    </div>
+                    <div class="col-md-4">
+                        <input
+                            class="form-control"
+                            type="email"
+                            name="email"
+                            formControlName="email"
+                            required                        
+                        />
+                    </div>
+                </div>
+                <!-- Sal -->
+                <div class="row mt-1">
+                    <div class="col-md-2">
+                        <label for="sal">Salary</label>
+                    </div>
+                    <div class="col-md-4">
+                        <input
+                            class="form-control"
+                            type="number"
+                            name="sal"
+                            formControlName="sal"
+                            required
+                        />
+                    </div>
+                    <!-- Commission -->
+                    <div class="col-md-1">
+                        <label for="comm">Commission</label>
+                    </div>
+                    <div class="col-md-4">
+                        <input
+                            class="form-control"
+                            type="number"
+                            name="comm"
+                            formControlName="comm"
+                            required
+                        />
+                    </div>
+                </div>
+                <div class="row mt-1">
+                </div>
+                <!-- Deptno -->
+                <div class="row mt-1">
+                    <div class="col-md-2">
+                        <label for="deptno">Department no</label>
+                    </div>
+                    <div class="col-md-4">
+                        <input
+                            class="form-control"
+                            type="text"
+                            name="deptno"
+                            formControlName="deptno"
+                            required
+                        />
+                    </div>
+                    <div class="col-md-1">
+                        <label for="skills">Skill</label>
+                    </div>
+                    <div class="col-md-4">
+                        <select multiple required name="skills"  formControlName="skills">
+                           <option *ngFor="let skill of skillsData" [ngValue]="skill.id">{{skill.name}}</option>
+                        </select>
+                    </div>
+                </div>
+                <!-- Action Buttons -->
+                <div class="row mt-1">
+                    <div class="offset-md-2  mr-5">
+                        <button
+                            class="btn btn-primary"
+                            type="submit"
+                        >
+                            Save
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
