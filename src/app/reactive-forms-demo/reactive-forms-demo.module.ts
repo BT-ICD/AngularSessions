@@ -5,11 +5,12 @@ import { Lab1customerComponent } from './lab1customer/lab1customer.component';
 import { RouterModule } from '@angular/router';
 import { Lab2EmployeeComponent } from './lab2-employee/lab2-employee.component';
 import { Lab3CustomerComponent } from './lab3-customer/lab3-customer.component';
+import { Lab4CustomerComponent } from './lab4-customer/lab4-customer.component';
 
 
 
 @NgModule({
-  declarations: [Lab1customerComponent, Lab2EmployeeComponent, Lab3CustomerComponent],
+  declarations: [Lab1customerComponent, Lab2EmployeeComponent, Lab3CustomerComponent, Lab4CustomerComponent],
   imports: [
     CommonModule,
     ReactiveFormsModule,
@@ -25,6 +26,10 @@ import { Lab3CustomerComponent } from './lab3-customer/lab3-customer.component';
       {
         path:'lab3',
         component:Lab3CustomerComponent
+      },
+      {
+        path:'lab4',
+        component:Lab4CustomerComponent
       }
     ])
   ]
