@@ -13,6 +13,7 @@ import { HomeComponent } from './home/home.component';
 import {FullnameModule} from './full-name-demo/fullname.module';
 import { AppNavBarComponent } from './partial/app-nav-bar.component';
 import { ViewChildDemoModule } from './view-child-demo/view-child-demo.module';
+import { StudentResultModule } from './student-result/student-result.module';
 
 
 @NgModule({
@@ -27,7 +28,9 @@ import { ViewChildDemoModule } from './view-child-demo/view-child-demo.module';
     NgbModule,
     FullnameModule,
     ViewChildDemoModule,
+    StudentResultModule,
     AppRoutingModule
+    
   ],
   exports:[],
   providers: [],

@@ -36,12 +36,17 @@
             <button class="btn"  ngbDropdownToggle>Lazy Load</button>
             <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
               <button ngbDropdownItem [routerLink]="['/products']" (click)="isMenuCollapsed = true">Products</button>
+
             </div>
           </div>
       <div ngbDropdown class="d-inline-block">
         <button class="btn"  ngbDropdownToggle>Component</button>
         <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
           <button ngbDropdownItem [routerLink]="['/fullname']" (click)="isMenuCollapsed = true">Full Name Component</button>
+          <button ngbDropdownItem [routerLink]="['/result']" (click)="isMenuCollapsed=true">Result</button>
+          <button ngbDropdownItem [routerLink]="['/resultsubject']" (click)="isMenuCollapsed=true">Result-2</button>
+          <button ngbDropdownItem [routerLink]="['/resultstudent']" (click)="isMenuCollapsed=true">Result-3</button>
+          
         </div>
       </div>
       <div ngbDropdown class="d-inline-block">

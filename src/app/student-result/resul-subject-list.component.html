@@ -1,0 +1,66 @@
+<div class="container mt-1">
+    <div class="card">
+        <div class="card-header">
+            <div class="row">
+                <div class="col-md-5">
+                    {{semesterResultMarks.semesterName}}
+                </div>
+                <div class="col-md-4">
+                   Year {{semesterResultMarks.examYear}}
+                </div>
+                <div class="col">
+                   Seat Number: {{semesterResultMarks.seatNumber}}
+                </div>
+            </div>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <table class="table table-bordered table-sm"> 
+                    <thead>
+                        <tr>
+                            <th>Subject</th>
+                            <th>Max</th>
+                            <th>Min</th>
+                            <th>Obtain</th>
+                            <th>Total</th>
+                            <th>Grade</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <ng-container *ngFor="let resultData of semesterResultMarks.resultdData ">
+                        <tr >
+                                <td [attr.rowspan]="2">{{resultData.subject}}</td>
+                                <td>{{resultData.marks[0].max}}</td>
+                                <td>{{resultData.marks[0].min}}</td>
+                                <td>{{resultData.marks[0].obtain}}</td>
+                                <td [attr.rowspan]="2">{{resultData.total}}</td>
+                                <td [attr.rowspan]="2">{{resultData.grade}}</td>
+
+                        </tr>
+                        <ng-container *ngFor="let mark of resultData.marks; let i=index">
+                                <tr *ngIf="i!=0">
+                                    <td>{{mark.max}}</td>
+                                    <td>{{mark.min}}</td>
+                                    <td>{{mark.obtain}}</td>
+                                </tr>
+                        </ng-container>
+                    </ng-container>
+                    </tbody>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="card-footer">
+            <div class="row">
+                <div class="col-md-9">
+                    Result: {{semesterResultMarks.status}}
+                </div>
+                <div class="col-md-3">
+                    Class:{{semesterResultMarks.resultClass}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

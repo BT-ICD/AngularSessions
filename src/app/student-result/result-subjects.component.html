@@ -1,0 +1,48 @@
+<div class="container mt-1">
+    <div class="card">
+        <div class="card-header">
+            <div class="row">
+                <div class="col-md-7">
+                    <label>{{semesterResult.semesterName}}</label>
+                </div>
+                <div class="col">
+                    {{semesterResult.examYear}}
+                </div>
+                <div class="col">
+                    Seat Number: {{semesterResult.seatNumber}}
+                </div>
+            </div>
+        </div>
+        <div class="card-body">
+            <!-- <div class="card-title text-white bg-secondary">
+ 
+            </div> -->
+            <table class="table table-bordered table-sm">
+                <thead >
+                    <tr>
+                        <th scope="col">Id</th>
+                        <th scope="col">Subject</th>
+                        <th scope="col">Th-Obtain</th>
+                        <th scope="col">From</th>
+                        <th scope="col">In-Obtain</th>
+                        <th scope="col">From</th>
+                        <th scope="col"> Tot-Obtain</th>
+                        <th scope="col">From</th>
+                    </tr>    
+                </thead>
+                <tbody>
+                    <tr *ngFor="let subject of semesterResult.resultdData">
+                        <td>{{subject.subjectId}}</td>
+                        <td>{{subject.subject}}</td>
+                        <td>{{subject.theoryObtain}}</td>
+                        <td>{{subject.theoryFrom}}</td>
+                        <td>{{subject.internalObtain}}</td>
+                        <td>{{subject.internalFrom}}</td>
+                        <td>{{subject.totalObtain}}</td>
+                        <td>{{subject.totalFrom}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

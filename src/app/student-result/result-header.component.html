@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            <div class="row">
+                <div class="col-md-9">
+                    Name: Rajesh Shah
+                </div>
+                <div class="col">
+                    Enrollment Number: 21029210292
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-9">
+                    College: Rollwala Computer Science
+                </div>
+            </div>
+        </div>
+        <div class="card-body">
+            <app-result-subjects *ngFor="let semesterResult of semesterResults" [semesterResult]= "semesterResult">
+
+            </app-result-subjects>
+        </div>
+        <div class="card-footer">
+            <div class="row">
+                <div class="col-md-2">
+                    <button class="form-control button btn-outline-primary" type="button" (click)="print()">Print</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
